@@ -1,5 +1,4 @@
 
-# Dictionary to store student data (Key: Student ID, Value: Dictionary of name and grade)
 students = {}
 
 def add_student():
@@ -17,7 +16,6 @@ def add_student():
 
         return
 
-    # Validate grade input
     try:
         grade = float(input("Enter Student Grade (0 to 100): "))
         if grade < 0 or grade > 100:
@@ -27,7 +25,7 @@ def add_student():
         print("Error: Please enter a valid numerical grade!")
         return
 
-    # Save student data
+
     students[student_id] = {"name": name, "grade": grade}
     print(f"Student '{name}' added successfully.")
 
@@ -138,7 +136,6 @@ def show_failed_students():
     for s_id, info in failed.items():
         print(f"ID: {s_id} | Name: {info['name']} | Grade: {info['grade']}")
 
-# Main menu function with continuous loop
 def main():
     while True:
         print("\n================ MAIN MENU ================")
@@ -188,7 +185,7 @@ def main():
         else:
             print("Invalid choice! Please enter a number between 1 and 12.")
 
-# Run the program
+
 if __name__ == "__main__":
 
     main()
